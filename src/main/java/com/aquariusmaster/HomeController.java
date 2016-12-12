@@ -23,4 +23,9 @@ public class HomeController {
     String login() {
         return "login";
     }
+
+    @RequestMapping("/jquery")
+    String jquery() {
+        return "jquery";
+    }
 }

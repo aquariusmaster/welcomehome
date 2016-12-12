@@ -2,28 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>element demo</title>
-    <style>
-        div, span {
-            width: 60px;
-            height: 60px;
-            float: left;
-            padding: 10px;
-            margin: 10px;
-            background-color: #eee;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-</head>
-<body>
+    <title>Element demo</title>
 
-<div>DIV1</div>
-<div>DIV2</div>
-<span>SPAN</span>
+    </head>
+    <body>
 
-<script>
-    $( "div" ).css( "border", "9px solid red" );
-</script>
+    <div id="tours">
+        <h1>Guided Tours</h1>
+        <ul>
+            <li class="usa tour">
+                <h2>New York, New York</h2>
+                <span class="details">$1,899 for 7 nights</span>
+                <button class="book">Book Now</button>
+            </li>
+        </ul>
+    </div>
 
-</body>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                var span = $('<p>This was added after load.</p>');
+                span.appendTo($("#tours"));
+            });
+        </script>
+    </body>
 </html>
