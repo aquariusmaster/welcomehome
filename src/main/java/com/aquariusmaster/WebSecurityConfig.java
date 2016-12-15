@@ -18,15 +18,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/", "/css/**", "/js/**", "/js/**", "/media/**").permitAll()
-                .anyRequest().authenticated()
-                .and()
+                    .antMatchers("/", "/css/**", "/js/**", "/js/**", "/media/**").permitAll()
+                    .anyRequest().authenticated()
+                    .and()
                 .formLogin()
-                .loginPage("/login")
-                .permitAll()
-                .and()
+                    .loginPage("/login")
+                    .permitAll()
+                    .and()
                 .logout()
-                .permitAll();
+                    .permitAll();
     }
 
 }
