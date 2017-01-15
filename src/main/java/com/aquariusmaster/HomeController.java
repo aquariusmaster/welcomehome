@@ -2,6 +2,10 @@ package com.aquariusmaster;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by andreb on 04.12.16.
@@ -32,5 +36,16 @@ public class HomeController {
     @RequestMapping("/main")
     String main() {
         return "main";
+    }
+
+    @RequestMapping("/rest")
+    @ResponseBody
+    String rest(){
+        return "This is response return";
+    }
+
+    @RequestMapping("/getrest")
+    String getRest() {
+        return "getrest";
     }
 }
